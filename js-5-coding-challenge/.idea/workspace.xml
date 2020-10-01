@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -53,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601560452509</updated>
-      <workItem from="1601560453708" duration="360000" />
+      <workItem from="1601560453708" duration="9948000" />
     </task>
     <servers />
   </component>
@@ -65,10 +66,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="272" y="22" key="#Notifications/0.0.1360.728@0.0.1360.728" timestamp="1601560662936" />
-    <state x="460" y="118" key="FileChooserDialogImpl" timestamp="1601560738717">
+    <state x="460" y="118" key="FileChooserDialogImpl" timestamp="1601573386597">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1601560738717" />
+    <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1601573386597" />
     <state x="181" y="6" key="SettingsEditor" timestamp="1601560676630">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
