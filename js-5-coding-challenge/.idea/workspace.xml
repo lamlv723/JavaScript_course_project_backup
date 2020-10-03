@@ -29,8 +29,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-4-dice-game" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Coding Challenge chap 5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/js-5-coding-challenge/Coding Challenge chap 5.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Coding Challenge chap 5.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -55,6 +65,13 @@
       <option name="presentableId" value="Default" />
       <updated>1601560452509</updated>
       <workItem from="1601560453708" duration="9948000" />
+      <workItem from="1601607870778" duration="307000" />
+      <workItem from="1601608216358" duration="107000" />
+      <workItem from="1601608423204" duration="112000" />
+      <workItem from="1601658413887" duration="241000" />
+      <workItem from="1601693261031" duration="145000" />
+      <workItem from="1601693413494" duration="2113000" />
+      <workItem from="1601696021790" duration="3594000" />
     </task>
     <servers />
   </component>
@@ -70,6 +87,38 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1601573386597" />
+    <state width="1339" height="179" key="GridCell.Tab.0.bottom" timestamp="1601696013418">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1339" height="179" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1601696013418" />
+    <state width="1339" height="179" key="GridCell.Tab.0.center" timestamp="1601696013418">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1339" height="179" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1601696013418" />
+    <state width="1339" height="179" key="GridCell.Tab.0.left" timestamp="1601696013418">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1339" height="179" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1601696013418" />
+    <state width="1339" height="179" key="GridCell.Tab.0.right" timestamp="1601696013418">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1339" height="179" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1601696013418" />
+    <state width="1339" height="179" key="GridCell.Tab.1.bottom" timestamp="1601696013418">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1339" height="179" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1601696013418" />
+    <state width="1339" height="179" key="GridCell.Tab.1.center" timestamp="1601696013418">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1339" height="179" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1601696013418" />
+    <state width="1339" height="179" key="GridCell.Tab.1.left" timestamp="1601696013418">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1339" height="179" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1601696013418" />
+    <state width="1339" height="179" key="GridCell.Tab.1.right" timestamp="1601696013418">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state width="1339" height="179" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1601696013418" />
     <state x="181" y="6" key="SettingsEditor" timestamp="1601560676630">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

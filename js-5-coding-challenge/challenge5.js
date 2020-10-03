@@ -20,6 +20,50 @@ method for this).
 private and doesn't interfere with the other programmers code (Hint: we learned a special technique to do exactly that).
 */
 
+/* *************************
+(function () {
+    function Question(question, answer, correctAnswer) {
+        this.question = question;
+        this.answer = answer;
+        this.correctAnswer = correctAnswer;
+    }
+
+    Question.prototype.displayQuestion = function () {
+        console.log(this.question);
+
+        for (var i = 0; i < this.answer.length; i++) {
+            console.log(i + '. ' + this.answer[i]);
+        }
+    };
+
+    Question.prototype.checkAnswer = function (ans) {
+        if (ans === this.correctAnswer) {
+            console.log('Congratulation!')
+        } else {
+            console.log('u r wrong!')
+        }
+        newQuestion();
+    };
+
+    var q1 = new Question('Lâm có đẹp trai ko?',
+        ['có','kó'],
+        0);
+
+    var q2 = new Question('Mãi mãi là bao lâu?',
+        ['5 tháng','2 năm'],
+        1);
+
+    var questions = [q1, q2];
+
+    var n = Math.floor(Math.random()) * questions.length;
+
+    questions[n].displayQuestion();
+
+    var answer = prompt('Pls enter you answer', '1');
+    questions[n].checkAnswer(answer);
+}) ();
+*************/
+
 /*
 --- Expert level ---
 8. After you display the result, display the next random question, so that the game never ends (Hint: write a function
@@ -32,52 +76,53 @@ more comfortable at this point).
 11. Display the score in the console. Use yet another method for this.
 */
 
-function Question(question, answer, correctAnswer) {
-    this.question = question;
-    this.answer = answer;
-    this.correctAnswer = correctAnswer;
-}
+(function () {
 
-Question.prototype.displayQuestion = function () {
-    console.log(this.question);
-
-    for (var i = 0; i < this.answer.length; i++) {
-        console.log(i + '. ' + this.answer[i]);
+    function Question(question, answer, correctAnswer) {
+        this.question = question;
+        this.answer = answer;
+        this.correctAnswer = correctAnswer;
     }
-};
 
-Question.prototype.checkAnswer = function (ans) {
-    if (ans === this.correctAnswer) {
-        console.log('Congratulation!')
-    } else {
-        console.log('u r wrong!')
+    Question.prototype.displayQuestion = function () {
+        console.log(this.question);
+
+        for (var i = 0; i < this.answer.length; i++) {
+            console.log(i + '. ' + this.answer[i]);
+        }
+    };
+
+    Question.prototype.checkAnswer = function (ans) {
+        if (ans == this.correctAnswer) {
+            console.log('Congratulation!')
+        } else {
+            console.log('u r wrong!')
+        }
+    };
+
+    var q1 = new Question('Lâm có đẹp trai ko?',
+        ['có','kó'],
+        0);
+
+    var q2 = new Question('Mãi mãi là bao lâu?',
+        ['5 tháng','2 năm'],
+        1);
+
+    var questions = [q1, q2];
+
+    function nextQuestion() {
+
+        var n = Math.floor(Math.random() * questions.length);
+
+        questions[n].displayQuestion();
+
+        var answer = prompt('Pls enter you answer', '1');
+
+        if (answer !== 'exit') {
+            questions[n].checkAnswer(parseInt(answer));
+            nextQuestion();
+        }
     }
-};
+    nextQuestion();
+}) ();
 
-
-/*
-Question.prototype.displayQuestion = function () {
-    console.log(this.question);
-};
-
-Question.prototype.checkAnswer = function () {
-
-
-};
-*/
-
-var q1 = new Question('Lâm có đẹp trai ko?',
-                        ['có','kó'],
-                    0);
-
-var q2 = new Question('Mãi mãi là bao lâu?',
-                        ['5 tháng','2 năm'],
-                    1);
-
-var questions = [q1, q2];
-
-var n = Math.floor(Math.random()) * questions.length;
-questions[n].displayQuestion();
-
-var answer = prompt('Pls enter you answer', '1');
-questions[n].checkAnswer(answer);
