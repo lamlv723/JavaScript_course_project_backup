@@ -78,26 +78,37 @@ more comfortable at this point).
 
 (function () {
 
-    function Question(question, answer, correctAnswer) {
+    function Question(question, answers, correct) {
         this.question = question;
-        this.answer = answer;
-        this.correctAnswer = correctAnswer;
+        this.answers = answers;
+        this.correct = correct;
     }
 
     Question.prototype.displayQuestion = function () {
         console.log(this.question);
 
-        for (var i = 0; i < this.answer.length; i++) {
-            console.log(i + '. ' + this.answer[i]);
+        for (var i = 0; i < this.answers.length; i++) {
+            console.log(i + '. ' + this.answers[i]);
         }
     };
 
-    Question.prototype.checkAnswer = function (ans) {
-        if (ans == this.correctAnswer) {
-            console.log('Congratulation!')
+    Question.prototype.checkAnswer = function(ans, callback) {
+        var sc;
+
+        if (ans === this.correct) {
+            console.log('Congratulation!');
+            sc = callback(true);
         } else {
-            console.log('u r wrong!')
+            console.log('U r wrong !!');
+            sc = callback(false);
         }
+
+        this.displayScore(sc);
+    };
+
+    Question.prototype.displayScore = function (score) {
+        console.log(score);
+        console.log('---------------------------------');
     };
 
     var q1 = new Question('Lâm có đẹp trai ko?',
@@ -110,6 +121,17 @@ more comfortable at this point).
 
     var questions = [q1, q2];
 
+    function score() {
+        var sc = 0;
+        return function (correct) {
+            if (correct) {
+                sc++;
+            }
+            return sc;
+        }
+    }
+    var keepScore = score();
+
     function nextQuestion() {
 
         var n = Math.floor(Math.random() * questions.length);
@@ -119,10 +141,9 @@ more comfortable at this point).
         var answer = prompt('Pls enter you answer', '1');
 
         if (answer !== 'exit') {
-            questions[n].checkAnswer(parseInt(answer));
+            questions[n].checkAnswer(parseInt(answer), keepScore); //call back cái nàyyyyyyyy
             nextQuestion();
         }
     }
     nextQuestion();
 }) ();
-
