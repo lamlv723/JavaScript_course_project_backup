@@ -29,7 +29,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-4-dice-game" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
@@ -76,6 +76,7 @@
       <workItem from="1601751671067" duration="1999000" />
       <workItem from="1601754585106" duration="1077000" />
       <workItem from="1601756181772" duration="13000" />
+      <workItem from="1601792412861" duration="12000" />
     </task>
     <servers />
   </component>
@@ -87,10 +88,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="272" y="22" key="#Notifications/0.0.1360.728@0.0.1360.728" timestamp="1601560662936" />
-    <state x="460" y="118" key="FileChooserDialogImpl" timestamp="1601573386597">
+    <state x="460" y="118" key="FileChooserDialogImpl" timestamp="1601792423732">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1601573386597" />
+    <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1601792423732" />
     <state width="1339" height="179" key="GridCell.Tab.0.bottom" timestamp="1601755663253">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
