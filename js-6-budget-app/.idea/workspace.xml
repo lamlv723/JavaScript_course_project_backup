@@ -18,6 +18,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1iP1yIF64lVzQuCzwMhG3CVH6tv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -63,6 +64,8 @@
       <workItem from="1601950084023" duration="147000" />
       <workItem from="1601950285589" duration="138000" />
       <workItem from="1602214639038" duration="3817000" />
+      <workItem from="1602225912278" duration="69000" />
+      <workItem from="1602290963697" duration="6546000" />
     </task>
     <servers />
   </component>
@@ -70,6 +73,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Inspections" timestamp="1602291751439">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1602291751439" />
     <state x="275" y="21" key="#Notifications" timestamp="1601950097815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -82,5 +89,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1601950043537" />
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602313278598">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1602313278598" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1602313330379">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1602313330379" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602313108340">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602313108340" />
   </component>
 </project>
