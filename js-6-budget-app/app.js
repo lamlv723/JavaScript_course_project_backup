@@ -97,7 +97,7 @@ var controller = (function(budgetCtrl, UICtrl) {
         input = UICtrl.getInput();
 
         // 2. add item to budget controller
-        newItem = budgetCtrl.addItem(input.type, input.description, input.value);
+        newItem = budgetCtrl.addItem(input.type, input.description, input.value); // <=========
 
         // 3. add item to UI controller
         // 4. calc the budget
