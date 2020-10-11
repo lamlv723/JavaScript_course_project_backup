@@ -15,8 +15,8 @@ var budgetController = (function() {
 
     var data = {
         allItems: {
-            allExpenses: [],
-            allIncome: []
+            exp: [],
+            inc: []
         },
         totals: {
             exp: 0,
@@ -33,7 +33,6 @@ var budgetController = (function() {
             } else {
                 ID = 0;
             }
-
 
             // create item
             if (type === 'inc') {
@@ -72,7 +71,7 @@ var UIController = (function() {
             };
         },
         getDOMstrings: function() {
-            return DOMstrings
+            return DOMstrings;
         }
     }
 })();
@@ -98,7 +97,7 @@ var controller = (function(budgetCtrl, UICtrl) {
 
         // 2. add item to budget controller
         newItem = budgetCtrl.addItem(input.type, input.description, input.value); // <=========
-
+        console.log(newItem);
         // 3. add item to UI controller
         // 4. calc the budget
         // 5. display to UI
