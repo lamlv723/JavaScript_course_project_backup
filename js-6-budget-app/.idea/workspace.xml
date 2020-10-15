@@ -31,9 +31,10 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -71,6 +72,9 @@
       <workItem from="1602387153932" duration="1671000" />
       <workItem from="1602389129336" duration="1125000" />
       <workItem from="1602413065544" duration="7000" />
+      <workItem from="1602748776492" duration="3954000" />
+      <workItem from="1602754022045" duration="300000" />
+      <workItem from="1602754328793" duration="2045000" />
     </task>
     <servers />
   </component>
@@ -90,9 +94,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602388822672" />
-    <state x="184" y="5" key="SettingsEditor" timestamp="1601950043537">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="183" y="5" key="SettingsEditor" timestamp="1602754307424">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state x="183" y="5" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1602754307424" />
     <state x="184" y="5" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1601950043537" />
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602313278598">
       <screen x="0" y="0" width="1366" height="728" />
@@ -102,9 +107,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1602313330379" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602313108340">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="344" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602754218416">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
+    <state x="344" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1602754218416" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602313108340" />
   </component>
 </project>
