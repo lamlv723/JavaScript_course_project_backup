@@ -87,10 +87,20 @@ var UIController = (function() {
 
             // 2. Change value, des, id
             newHtml = html.replace('%id%', obj.id);
-            newHtml = html.replace('%description%', obj.description);
-            newHtml = html.replace('%value%', obj.value);
+            newHtml = newHtml.replace('%description%', obj.description);
+            newHtml = newHtml.replace('%value%', obj.value);
             // 3. Thêm vào DOM
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+        },
+
+        clearFields: function () {
+            var fields, fieldsArr;
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
+
+            fieldsArr = Array.prototype.slice.call(fields);
+            fieldsArr.forEach(function (current, index, array) {
+                current.value = "";
+            });
         },
 
         getDOMstrings: function() {
@@ -122,6 +132,8 @@ var controller = (function(budgetCtrl, UICtrl) {
         newItem = budgetCtrl.addItem(input.type, input.description, input.value);
         // 3. add item to UI controller
         UICtrl.addListItem(newItem, input.type);
+        // clear
+        UICtrl.clearFields();
         // 4. calc the budget
         // 5. display to UI
     };
