@@ -99,13 +99,17 @@ var UIController = (function() {
 
             fieldsArr = Array.prototype.slice.call(fields);
             fieldsArr.forEach(function (current, index, array) {
-                current.value = "";
+                current.value = ""; // value property
             });
+
+            fieldsArr[0].focus();
         },
+
+
 
         getDOMstrings: function() {
             return DOMstrings;
-        }
+        } 
     }
 })();
 
@@ -132,10 +136,11 @@ var controller = (function(budgetCtrl, UICtrl) {
         newItem = budgetCtrl.addItem(input.type, input.description, input.value);
         // 3. add item to UI controller
         UICtrl.addListItem(newItem, input.type);
-        // clear
+        // 4. clear
         UICtrl.clearFields();
-        // 4. calc the budget
-        // 5. display to UI
+        // 5. calc the budget
+
+        // 6. display to UI
     };
 
     return {
