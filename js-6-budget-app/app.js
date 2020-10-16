@@ -69,7 +69,7 @@ var UIController = (function() {
             return {
                 type: document.querySelector(DOMstrings.inputType).value,
                 description: document.querySelector(DOMstrings.inputDescription).value,
-                value: document.querySelector(DOMstrings.inputValue).value,
+                value: parseFloat(document.querySelector(DOMstrings.inputValue).value),
             };
         },
 
@@ -79,10 +79,10 @@ var UIController = (function() {
             // 1. Tạo dòng html để thêm vào mỗi item
             if (type === 'inc') {
                 element = DOMstrings.incomeContainer;
-                html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"> <div class="item__value">+ %value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
+                html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"> <div class="item__value"> %value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
             } else if (type === 'exp') {
                 element = DOMstrings.expensesContainer;
-                html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">- %value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
+                html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value"> %value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
             }
 
             // 2. Change value, des, id
@@ -128,19 +128,28 @@ var controller = (function(budgetCtrl, UICtrl) {
         });
     };
 
+    var updateBudget = function () {
+        // 5. calc the budget
+        
+        
+
+        // 6. display to UI
+    }
+
     var ctrlAddItem = function() {
         // 1. get data
         input = UICtrl.getInput();
-
-        // 2. add item to budget controller
-        newItem = budgetCtrl.addItem(input.type, input.description, input.value);
-        // 3. add item to UI controller
-        UICtrl.addListItem(newItem, input.type);
-        // 4. clear
-        UICtrl.clearFields();
-        // 5. calc the budget
-
-        // 6. display to UI
+        
+        if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
+            // 2. add item to budget controller
+            newItem = budgetCtrl.addItem(input.type, input.description, input.value);
+            // 3. add item to UI controller
+            UICtrl.addListItem(newItem, input.type);
+            // 4. clear
+            UICtrl.clearFields();
+        };
+        // 5.
+        updateBudget();
     };
 
     return {
