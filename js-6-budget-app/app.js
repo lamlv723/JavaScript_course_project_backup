@@ -74,7 +74,7 @@ var budgetController = (function() {
             return newItem;
         },
 
-        deleteItem: function (type, id) {
+        deleteItem: function(type, id) {
             var ids, index;
             ids = data.allItems[type].map(function(current) {
                 return current.id;
@@ -147,9 +147,10 @@ var UIController = (function() {
         percentageLabel: '.budget__expenses--percentage',
         container: '.container',
         expensesPercLabel: '.item__percentage',
+        monthLabel: '.budget__title--month'
     };
 
-    var formatNumber = function (num, type) {
+    var formatNumber = function(num, type) {
         var numSplit, int, dec;
 
         num = Math.abs(num);
@@ -165,6 +166,14 @@ var UIController = (function() {
          return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec;
     }
 
+    // tự làm 1 forEach cho nodeList (nodeList ko có property forEach)
+    var nodeListForEach = function(list, callback) {
+        for (var i = 0; i < list.length; i++) {
+            callback(list[i], i);
+        }
+    };
+
+
     return {
         getInput: function() {
             return {
@@ -174,7 +183,7 @@ var UIController = (function() {
             };
         },
 
-        addListItem: function (obj, type) {
+        addListItem: function(obj, type) {
             var html, newHtml, element;
 
             // 1. Tạo dòng html để thêm vào mỗi item
@@ -195,13 +204,13 @@ var UIController = (function() {
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
         },
 
-        deleteListItem: function (selectorID) {
+        deleteListItem: function(selectorID) {
             var el;
             el = document.getElementById(selectorID);
             el.parentNode.removeChild(el);
         },
 
-        clearFields: function () {
+        clearFields: function() {
             var fields, fieldsArr;
             fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
 
@@ -213,7 +222,7 @@ var UIController = (function() {
             fieldsArr[0].focus();
         },
 
-        displayBudget: function (obj) {
+        displayBudget: function(obj) {
             var type;
 
             obj.budget > 0 ? type = 'inc' : type = 'exp';
@@ -230,12 +239,6 @@ var UIController = (function() {
 
         displayPercentages: function(percentages) {
             var fields = document.querySelectorAll(DOMstrings.expensesPercLabel);
-           // tự làm 1 forEach cho nodeList (nodeList ko có property forEach)
-            var nodeListForEach = function(list, callback) {
-                for (var i = 0; i < list.length; i++) {
-                    callback(list[i], i);
-                }
-            };
 
             nodeListForEach(fields, function (current, index) {
                 if (percentages[index] > 0) {
@@ -244,6 +247,29 @@ var UIController = (function() {
                     current.textContent = '---';
                 }
             });
+        },
+
+        displayMonth: function() {
+            var now, month, months, year;
+
+            now = new Date();
+            year = now.getFullYear();
+            month = now.getMonth();
+            months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+            document.querySelector(DOMstrings.monthLabel).textContent = months[month] + ' ' + year;
+        },
+
+        changedType: function() {
+            var fields = document.querySelectorAll(
+                DOMstrings.inputType + ',' +
+                DOMstrings.inputDescription + ',' +
+                DOMstrings.inputValue
+            );
+            nodeListForEach(fields, function (cur) {
+                cur.classList.toggle('red-focus');
+            })
+            document.querySelector(DOMstrings.inputBtn).classList.toggle('red');
         },
 
         getDOMstrings: function() {
@@ -267,6 +293,8 @@ var controller = (function(budgetCtrl, UICtrl) {
         });
 
         document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
+        document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
+
     };
 
     var updateBudget = function () {
@@ -306,7 +334,7 @@ var controller = (function(budgetCtrl, UICtrl) {
     };
 
     var ctrlDeleteItem = function (event) { // tạo fnc đây để muốn biết Target Element
-        var itemID, splitID, type, ID;
+        var itemID, splitID, type, ID, itemtest;
             itemID = event.target.parentNode.parentNode.parentNode.parentNode.id;
 
         if (itemID) {
@@ -327,6 +355,7 @@ var controller = (function(budgetCtrl, UICtrl) {
     return {
         init: function () {
             console.log('test init!');
+            UICtrl.displayMonth();
             UICtrl.displayBudget({
                 budget: 0,
                 totalInc: 0,
