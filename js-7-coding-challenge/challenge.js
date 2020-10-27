@@ -68,8 +68,7 @@ function calc(arr) {
 }
 
 function parkReport(park) {
-    console.log(`------------------R-E-P-O-R-T----P-A-R-K-S------------------`);
-
+    console.log(`------------------R-E-P-O-R-T----P-A-R-K-S------------------ \n `);
     //CALC DESTINY
     park.forEach(element => element.treeDestiny());
     //AVERAGE AGE
@@ -83,7 +82,7 @@ function parkReport(park) {
 };
 
 function streetReport(street) {
-    console.log(`------------------R-E-P-O-R-T----S-T-R-E-E-T---------------`);
+    console.log(` \n ------------------R-E-P-O-R-T----S-T-R-E-E-T--------------- \n `);
 
     // TOTAL & AVERAGE LENGTH 
     const lengths = street.map(cur => cur.len);
