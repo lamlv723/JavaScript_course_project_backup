@@ -12,7 +12,7 @@ const play = function () {
     const getValue = Number(document.querySelector('.guess').value);
     if (!getValue) {
         displayMessage('⛔️ No number!');
-    } else if (score > 1) {
+    } else if (score > 0) {
         if (getValue !== secretNum) {
             displayMessage(getValue > secretNum ? '📈 Too high!' : '📉 Too low!');
             score--;
@@ -36,22 +36,25 @@ const play = function () {
     }
 };
 
+const keyEvent = function (event) {
+    if (event.keyCode === 13) {
+        play();
+    }
+};
+
 const setupEventListeners = function() {
     document.querySelector('.check').addEventListener('click', play);
-    document.addEventListener('keypress', function (event) {
+    document.addEventListener('keypress', keyEvent)
+/*    document.addEventListener('keypress', function (event) {
         if (event.keyCode === 13) {
             play();
         }
-    });
+    });*/
 };
 
 const removeHandler = function () {
     document.querySelector('.check').removeEventListener('click', play);
-    document.removeEventListener('keypress', function (event) {
-        if (event.keyCode === 13) {
-            play();
-        }
-    });
+    document.removeEventListener('keypress', keyEvent);
 };
 
 const repeat = function () {
