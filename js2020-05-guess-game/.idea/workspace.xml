@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfdfab37-aaa7-4036-beb5-66855737d237" name="Default Changelist" comment="" />
+    <list default="true" id="dfdfab37-aaa7-4036-beb5-66855737d237" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +36,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -62,7 +67,11 @@
       <workItem from="1604511467355" duration="18000" />
       <workItem from="1604519428298" duration="2000" />
       <workItem from="1604673772783" duration="1551000" />
-      <workItem from="1604683205033" duration="204000" />
+      <workItem from="1604683205033" duration="891000" />
+      <workItem from="1605283783743" duration="35000" />
+      <workItem from="1605324269782" duration="19000" />
+      <workItem from="1605348149425" duration="336000" />
+      <workItem from="1605348492736" duration="1228000" />
     </task>
     <servers />
   </component>
@@ -70,9 +79,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="181" y="11" key="SettingsEditor" timestamp="1605349642781">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="181" y="11" key="SettingsEditor/0.0.1360.738@0.0.1360.738" timestamp="1605349642781" />
+    <state x="489" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605349546083">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="489" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.738@0.0.1360.738" timestamp="1605349546083" />
     <state x="336" y="165" key="run.anything.popup" timestamp="1604401345825">
       <screen x="0" y="0" width="1360" height="738" />
     </state>
     <state x="336" y="165" key="run.anything.popup/0.0.1360.738@0.0.1360.738" timestamp="1604401345825" />
+    <state x="343" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1605349574777">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="343" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1360.738@0.0.1360.738" timestamp="1605349574777" />
   </component>
 </project>
