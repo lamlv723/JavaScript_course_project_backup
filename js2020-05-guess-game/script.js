@@ -72,7 +72,4 @@ const repeat = function () {
 
 document.querySelector('.again').addEventListener('click', repeat);
 
-setupEventListeners('adfj')
-
-
-
+setupEventListeners();
