@@ -1,16 +1,18 @@
 {
-  "name": "js2020-16-asynchronous",
-  "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
-  "dependencies": {
-    "leaflet": "^1.7.1",
-    "lodash-es": "^4.17.15"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+   "name": "js2020-16-asynchronous",
+   "version": "1.0.0",
+   "description": "",
+   "main": "script.js",
+   "dependencies": {
+      "leaflet": "^1.7.1",
+      "lodash-es": "^4.17.15",
+      "parcel": "^1.12.4"
+   },
+   "devDependencies": {},
+   "scripts": {
+      "start": "parcel index.html",
+      "build": "parcel build index.html"
+   },
+   "author": "",
+   "license": "ISC"
 }
