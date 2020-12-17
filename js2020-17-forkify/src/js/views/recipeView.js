@@ -2,7 +2,7 @@ import View from './View.js';
 
 import icons from 'url:../../img/icons.svg'; // parcel 2
 
-/////////////////
+// // // // // // // // // // // //
 
 class RecipeView extends View {
    _parentElement = document.querySelector('.recipe');

@@ -1,5 +1,7 @@
 import icons from 'url:../../img/icons.svg'; // parcel 2
 
+// // // // // // // // // // // //
+
 export default class View {
    _data;
    render(data) {
