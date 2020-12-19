@@ -76,11 +76,16 @@ export const updateServings = function (newServing) {
    state.recipe.servings = newServing;
 };
 
+const persistBookmark = function () {
+   localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
+};
+
 export const addBookmark = function (recipe) {
    // Thêm bookmarks
    state.bookmarks.push(recipe);
    // Đánh dấu bookmarked
    if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
+   persistBookmark();
 };
 
 export const deleteBookmark = function (id) {
@@ -89,4 +94,16 @@ export const deleteBookmark = function (id) {
    state.bookmarks.splice(index, 1);
    // Đánh dấu đã xóa
    if (id === state.recipe.id) state.recipe.bookmarked = false;
+   persistBookmark();
+};
+
+const init = function () {
+   const storage = localStorage.getItem('bookmarks');
+   if (storage) state.bookmarks = JSON.parse(storage);
+};
+init();
+
+// Function để debug
+const clearBookmarks = function () {
+   localStorage.clear('bookmarks');
 };
