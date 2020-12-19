@@ -11,6 +11,7 @@ export const state = {
       page: DEF_FIRST_PAGE,
       resultsPerPage: RES_PER_PAGE,
    },
+   bookmarks: [],
 };
 
 export const loadRecipe = async function (id) {
@@ -29,7 +30,10 @@ export const loadRecipe = async function (id) {
          publisher: recipe.publisher,
          sourceUrl: recipe.source_url,
       };
-      //   console.log(state.recipe); // TODO: need to be deleted
+
+      if (state.bookmarks.some(bookmark => bookmark.id === id)) {
+         state.recipe.bookmarked = true;
+      } else state.recipe.bookmarked = false;
    } catch (err) {
       console.error(err);
       throw err;
@@ -70,4 +74,19 @@ export const updateServings = function (newServing) {
    });
 
    state.recipe.servings = newServing;
+};
+
+export const addBookmark = function (recipe) {
+   // Thêm bookmarks
+   state.bookmarks.push(recipe);
+   // Đánh dấu bookmarked
+   if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
+};
+
+export const deleteBookmark = function (id) {
+   // Xóa bookmark
+   const index = state.bookmarks.findIndex(el => el.id === id);
+   state.bookmarks.splice(index, 1);
+   // Đánh dấu đã xóa
+   if (id === state.recipe.id) state.recipe.bookmarked = false;
 };
