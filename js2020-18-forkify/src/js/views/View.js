@@ -14,6 +14,36 @@ export default class View {
       this._parentElement.insertAdjacentHTML('afterbegin', markup);
    }
 
+   update(data) {
+      this._data = data;
+      const newMarkup = this._generateMarkup();
+
+      const newDOM = document.createRange().createContextualFragment(newMarkup); // return document-fragment
+      const newElements = Array.from(newDOM.querySelectorAll('*')); // Array.from() : convert nodeList => array
+      const curElements = Array.from(this._parentElement.querySelectorAll('*'));
+
+      newElements.forEach((newEl, i) => {
+         const curEl = curElements[i];
+
+         // change text element
+         // newEl.firstChild.nodeValue.trim() check để replace thẻ CHỨA TEXT chứ ko phải thay hết cả node
+         if (
+            !newEl.isEqualNode(curEl) &&
+            newEl.firstChild?.nodeValue.trim() !== '' // Optional chaining (make sure 100% work)
+         ) {
+            curEl.textContent = newEl.textContent;
+         }
+
+         // change attribute
+         if (!newEl.isEqualNode(curEl)) {
+            // newEl.attributes returns NameNodeMap => cần convert sang array để loop
+            Array.from(newEl.attributes).forEach(attribute => {
+               curEl.setAttribute(attribute.name, attribute.value);
+            });
+         }
+      });
+   }
+
    _clear() {
       this._parentElement.innerHTML = '';
    }
