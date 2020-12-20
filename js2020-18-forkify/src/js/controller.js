@@ -111,6 +111,8 @@ const controlBookmarks = function () {
 
 const controlAddRecipe = async function (newRecipe) {
    try {
+      addRecipeView.renderSpinner();
+
       await model.uploadRecipe(newRecipe);
       console.log(model.state.recipe);
 
@@ -119,6 +121,12 @@ const controlAddRecipe = async function (newRecipe) {
 
       // Success message
       addRecipeView.renderMessage();
+
+      // Render bookmarks
+      bookmarksView.render(model.state.bookmarks);
+
+      // Change url id
+      window.history.pushState(null, '', `#${model.state.recipe.id}`);
 
       // Clode modal
       setTimeout(function () {
