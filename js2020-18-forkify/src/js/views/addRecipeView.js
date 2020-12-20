@@ -9,6 +9,7 @@ class AddRecipeView extends View {
    _window = document.querySelector('.add-recipe-window');
    _btnClose = document.querySelector('.btn--close-modal');
    _btnOpen = document.querySelector('.nav__btn--add-recipe');
+   _message = 'Your recipe was added';
 
    constructor() {
       super();

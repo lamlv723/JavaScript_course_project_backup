@@ -14,22 +14,26 @@ export const state = {
    bookmarks: [],
 };
 
+const createRecipeObject = function (data) {
+   const { recipe } = data.data;
+   return {
+      title: recipe.title,
+      id: recipe.id,
+      cookingTime: recipe.cooking_time,
+      servings: recipe.servings,
+      ingredients: recipe.ingredients,
+      image: recipe.image_url,
+      publisher: recipe.publisher,
+      sourceUrl: recipe.source_url,
+      ...(recipe.key && { key: recipe.key }), // nếu ko có key (left) => falsey value => right ko thực hiện. Nếu left có key => return giá trị key bên phải
+   };
+};
+
 export const loadRecipe = async function (id) {
    try {
       // 1. Get data
       const data = await getJSON(`${API_URL}${id}`);
-
-      const { recipe } = data.data;
-      state.recipe = {
-         title: recipe.title,
-         id: recipe.id,
-         cookingTime: recipe.cooking_time,
-         servings: recipe.servings,
-         ingredients: recipe.ingredients,
-         image: recipe.image_url,
-         publisher: recipe.publisher,
-         sourceUrl: recipe.source_url,
-      };
+      state.recipe = createRecipeObject(data);
 
       if (state.bookmarks.some(bookmark => bookmark.id === id)) {
          state.recipe.bookmarked = true;
@@ -131,6 +135,8 @@ export const uploadRecipe = async function (newRecipe) {
          ingredients,
       };
       const data = await sendJSON(`${API_URL}?key=${KEY}`, recipe);
+      state.recipe = createRecipeObject(data);
+      addBookmark(state.recipe);
    } catch (err) {
       throw err;
    }
