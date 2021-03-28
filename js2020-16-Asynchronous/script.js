@@ -72,26 +72,26 @@ getCountryData('thailand');
 //       });
 // };
 
-// const getConntryData = function (country) {
-//    fetch(`https://restcountries.eu/rest/v2/name/${country}`)
-//       .then(response => response.json())
-//       .then(data => {
-//          renderCountry(data[0]);
-//          const neighbour = data[0].borders[0];
+const getConntryData = function (country) {
+   fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+      .then(response => response.json())
+      .then(data => {
+         renderCountry(data[0]);
+         const neighbour = data[0].borders[0];
 
-//          if (!neighbour) return;
-//          return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
-//       })
-//       .then(response => response.json())
-//       .then(data => renderCountry(data, 'neighbour'))
-//       .catch(err => {
-//          console.error(`${err} 🔥🔥🔥`);
-//          renderError(`🆘ERROR: ${err.message}. Please try again!`);
-//       })
-//       .finally(() => {
-//          contriesContainer.style.opacity = 1;
-//       });
-// };
+         if (!neighbour) return;
+         return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
+      })
+      .then(response => response.json())
+      .then(data => renderCountry(data, 'neighbour'))
+      .catch(err => {
+         console.error(`${err} 🔥🔥🔥`);
+         renderError(`🆘ERROR: ${err.message}. Please try again!`);
+      })
+      .finally(() => {
+         contriesContainer.style.opacity = 1;
+      });
+};
 
 const getJSON = function (url, errorMsg = 'Something went wrong') {
    return fetch(url).then(response => {
@@ -224,47 +224,45 @@ createImage('img/img-1.jpg')
 */
 
 ///////////////////////
-/*
-const whereAmI = async function () {
-   try {
-      const pos = await getPosition();
-      const { latitude: lat, longitude: lng } = pos.coords;
 
-      const resGeo = await fetch(
-         `https://geocode.xyz/${lat},${lng}?geoit=JSON`
-      );
-      if (!resGeo.ok) throw new Error(`Promise rejected 🍕`);
-      const dataGeo = await resGeo.json();
+// const whereAmI = async function () {
+//    try {
+//       const pos = await getPosition();
+//       const { latitude: lat, longitude: lng } = pos.coords;
 
-      const res = await fetch(
-         `https://restcountries.eu/rest/v2/name/${dataGeo.country}`
-      );
-      if (!res.ok) throw new Error(`Promise country rejected 🍕🍕`);
+//       const resGeo = await fetch(
+//          `https://geocode.xyz/${lat},${lng}?geoit=JSON`
+//       );
+//       if (!resGeo.ok) throw new Error(`Promise rejected 🍕`);
+//       const dataGeo = await resGeo.json();
 
-      const data = await res.json();
-      renderCountry(data[0]);
-      return `You are in ${dataGeo.city}, ${dataGeo.country}`;
-   } catch (err) {
-      renderError(`${err.message}`);
-      throw err;
-   }
-};
-// whereAmI(51.50354, -0.12768);
+//       const res = await fetch(
+//          `https://restcountries.eu/rest/v2/name/${dataGeo.country}`
+//       );
+//       if (!res.ok) throw new Error(`Promise country rejected 🍕🍕`);
+
+//       const data = await res.json();
+//       renderCountry(data[0]);
+//       return `You are in ${dataGeo.city}, ${dataGeo.country}`;
+//    } catch (err) {
+//       renderError(`${err.message}`);
+//       throw err;
+//    }
+// };
+// // whereAmI(51.50354, -0.12768);
 // btn.addEventListener('click', whereAmI);
-(async function () {
-   try {
-      const city = await whereAmI();
-      console.log(`2: ${city}`);
-   } catch (err) {
-      console.error(`2: ${err.message}`);
-   }
-   console.log(`3: Finished`);
-})();
-*/
+// (async function () {
+//    try {
+//       const city = await whereAmI();
+//       console.log(`2: ${city}`);
+//    } catch (err) {
+//       console.error(`2: ${err.message}`);
+//    }
+//    console.log(`3: Finished`);
+// })();
 
 ///////////////////////////////
 
-/*
 const get3Countries = async function (c1, c2, c3) {
    try {
       const data = await Promise.all([
@@ -278,8 +276,7 @@ const get3Countries = async function (c1, c2, c3) {
       console.log(err);
    }
 };
-get3Countries('vietnam', 'laos', 'usa');
-*/
+btn.addEventListener('click', get3Countries('vietnam', 'laos', 'usa'));
 
 /////////NOTE:///////////////
 
