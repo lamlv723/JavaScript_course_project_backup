@@ -1,8 +1,9 @@
 Repo to practice from the JavaScript Course on Udemy
 ----------------------------------------------------
 
-This repo has 2 branches for version 2019 and 2020
-I'm working with JavaScript only. These following demo websites are not supported in multi-device
+🌵This repo has 2 branches for version 2019 and 2020.
+
+🤦‍♂️I'm working with JavaScript only. These following demo websites are not supported in multi-device
 
 
 Foriky - Food Recipe Site
