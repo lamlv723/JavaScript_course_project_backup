@@ -8,17 +8,22 @@ Repo to practice from the JavaScript Course on Udemy
 
 Foriky - Food Recipe Site
 -------------------------
+GOOD FOOD is GOOD MOOD ✨👌
+
 [Try it now](https://forkify-lam.netlify.app)
 
 You also need [search queries](https://forkify-api.herokuapp.com/phrases.html)
 
 Monthly Budget Calculator
 -------------------------
+Let's see how waste you spending 😢
+
 [Try it now](https://costcalcify.netlify.app)
 
 Dice Game
 ---------
 100 Scores to win!
+
 [Play now](https://dicerollify.netlify.app)
 
 Bankist Landing Page
